@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://mjunaid106.github.io/ejaad/sitemap.xml
