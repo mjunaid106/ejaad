@@ -1,4 +1,4 @@
-/* eJaad — small, dependency-free enhancements */
+/* ejaad — small, dependency-free enhancements */
 (function () {
   "use strict";
 

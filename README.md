@@ -1,16 +1,14 @@
-# eJaad — website
+# ejaad — website
 
-Marketing site for **eJaad**, a software consultancy building AI systems, mobile apps and
+Marketing site for **ejaad**, a software consultancy building AI systems, mobile apps and
 games, websites, and corporate systems.
 
 Live at **https://mjunaid106.github.io/ejaad/**
 
 ## Brand mark
 
-The icon is a **"j" monogram** — the distinctive letter of *eJaad* — set in gradient on an ink
-tile. The detached dot is the *nuqta*, the Arabic diacritic that distinguishes letters, and
-reads as the spark that starts a new idea: a fitting mark for a name derived from *ijād*
-(إيجاد), "creation".
+The icon is a **"j" monogram** — the distinctive letter of *ejaad* — set in gradient on an ink
+tile. The detached dot reads as the spark that starts a new idea.
 
 Source files:
 

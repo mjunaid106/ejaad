@@ -1,5 +1,5 @@
 /* ==========================================================================
-   eJaad — light, bold, consultancy
+   ejaad — light, bold, consultancy
    Type: Inter Tight (display) / Inter (body)
    ========================================================================== */
 
@@ -295,6 +295,8 @@ strong { font-weight: 600; }
   border-bottom: 1px solid var(--line);
 }
 .cap {
+  --tint: #eef2ff;
+  --tint-hover: #e2e9ff;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -303,8 +305,12 @@ strong { font-weight: 600; }
   padding: 1.35rem 1.3rem 1.5rem;
   border-right: 1px solid var(--line);
   position: relative;
+  background: var(--tint);
   transition: background 0.22s ease;
 }
+.cap:nth-child(2) { --tint: #fff1ea; --tint-hover: #ffe7dc; }
+.cap:nth-child(3) { --tint: #e9faf3; --tint-hover: #d9f6ea; }
+.cap:nth-child(4) { --tint: #f4f0ff; --tint-hover: #ebe3ff; }
 .cap:last-child { border-right: 0; }
 .cap::before {
   content: "";
@@ -316,13 +322,13 @@ strong { font-weight: 600; }
   transform-origin: left;
   transition: transform 0.3s var(--ease);
 }
-.cap:hover { background: var(--accent-soft); }
+.cap:hover { background: var(--tint-hover); }
 .cap:hover::before { transform: scaleX(1); }
 .cap-num {
   font-size: 0.68rem;
   font-weight: 500;
   letter-spacing: 0.1em;
-  color: var(--faint);
+  color: var(--muted);
 }
 .cap-name {
   font-family: var(--font-display);
@@ -337,7 +343,7 @@ strong { font-weight: 600; }
   top: 1.25rem;
   right: 1.2rem;
   font-size: 1.05rem;
-  color: var(--faint);
+  color: var(--muted);
   transition: transform 0.22s var(--ease), color 0.18s ease;
 }
 .cap:hover .cap-name { color: var(--accent); }
@@ -929,7 +935,7 @@ a.contact-line:hover .contact-value { color: var(--accent); }
   }
   body.nav-open { overflow: hidden; }
 
-  .hero { padding-top: 2.2rem; }
+  .hero { padding-top: 2.2rem; padding-bottom: 1.6rem; }
   .hero h1 { font-size: clamp(2.45rem, 10.5vw, 3.6rem); }
   .eyebrow-cats { display: none; }
   .hero-actions { align-items: flex-start; flex-direction: column; }
