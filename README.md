@@ -12,8 +12,8 @@ tile. The detached dot reads as the spark that starts a new idea.
 
 Source files:
 
-- `assets/img/favicon.svg` — scalable mark, used in the header, footer and browser tab
-- `assets/img/apple-touch-icon.png` — 180×180 home-screen icon
+- `assets/img/brand-mark.svg` — scalable mark, used in the header, footer and browser tab
+- `assets/img/brand-mark-180.png` — 180×180 home-screen icon
 - `assets/img/og.png` — 1200×630 social preview built from the same mark
 
 ## Stack
