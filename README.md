@@ -101,4 +101,3 @@ Cloudflare Worker, etc.) and set the form's `action` and `method="post"`, then r
 - Respects `prefers-reduced-motion`.
 - Responsive from 320px up; mobile nav locks body scroll and closes on link click or `Esc`.
 - System-font fallbacks plus `font-display: swap`; no blocking scripts.
-- Film-grain texture is a single inline SVG — no image requests.

@@ -5,12 +5,12 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
 <title>Page not found — eJaad</title>
 <meta name="robots" content="noindex" />
-<meta name="theme-color" content="#f6f4ee" />
+<meta name="theme-color" content="#ffffff" />
 <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml" />
 <link rel="apple-touch-icon" href="assets/img/apple-touch-icon.png" />
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter:wght@400;500&family=JetBrains+Mono:wght@400&display=swap" rel="stylesheet" />
+<link href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
 <link rel="stylesheet" href="assets/css/styles.css" />
 <style>
   .notfound {
@@ -19,27 +19,19 @@
     align-content: center;
     padding-block: 4rem;
   }
-  .notfound .code {
-    font-family: var(--font-mono);
-    font-size: 0.72rem;
-    letter-spacing: 0.14em;
-    text-transform: uppercase;
-    color: var(--faint);
-    margin-bottom: 1.4rem;
-  }
-  .notfound h1 { max-width: 16ch; margin-bottom: 1.4rem; }
-  .notfound p { max-width: 46ch; color: var(--muted); margin-bottom: 2rem; }
+  .notfound h1 { max-width: 15ch; margin-bottom: 1.4rem; }
+  .notfound .notfound-copy { max-width: 46ch; color: var(--muted); margin-bottom: 2rem; }
 </style>
 </head>
 <body>
 <main class="notfound">
   <div class="container">
-    <p class="code">Error 404 — Nothing here</p>
-    <h1>This page went <em>missing</em>.</h1>
-    <p>The link is broken or the page moved. Head back to the homepage, or send us a note and we'll point you in the right direction.</p>
+    <p class="eyebrow"><span class="sq"></span>Error 404 — nothing here</p>
+    <h1>This page went <span class="accent">missing.</span></h1>
+    <p class="notfound-copy">The link is broken or the page moved. Head back to the homepage, or send us a note and we'll point you in the right direction.</p>
     <div class="hero-actions">
-      <a class="btn btn-solid" href="index.html">Back to eJaad <span aria-hidden="true">↗</span></a>
-      <a class="btn btn-quiet" href="mailto:hello@ejaad.com">hello@ejaad.com</a>
+      <a class="btn btn-solid" href="index.html">Back to eJaad <span aria-hidden="true">→</span></a>
+      <a class="link-arrow" href="mailto:hello@ejaad.com">hello@ejaad.com</a>
     </div>
   </div>
 </main>
