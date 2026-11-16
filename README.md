@@ -8,7 +8,8 @@ Live at **https://mjunaid106.github.io/ejaad/**
 ## Brand mark
 
 The icon is a **"j" monogram** — the distinctive letter of *ejaad* — set in gradient on an ink
-tile. The detached dot reads as the spark that starts a new idea.
+tile. The detached dot reads as the spark that starts a new idea — a fitting mark for a name
+that means "creation".
 
 Source files:
 
