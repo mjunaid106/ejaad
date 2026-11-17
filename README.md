@@ -3,7 +3,7 @@
 Marketing site for **ejaad**, a software consultancy building AI systems, mobile apps and
 games, websites, and corporate systems.
 
-Live at **https://mjunaid106.github.io/ejaad/**
+Live at **https://ejaad.co.uk/**
 
 ## Brand mark
 
@@ -47,7 +47,7 @@ Then open <http://localhost:8000>. Opening `index.html` directly also works.
 
 ## Editing
 
-**Contact email** — replace `hello@ejaad.com` in `index.html` (search for it; it appears in the
+**Contact email** — replace `hello@ejaad.co.uk` in `index.html` (search for it; it appears in the
 contact block, the 404 page, and the JSON-LD schema) and in `assets/js/main.js` (the `mailto:`
 target).
 
@@ -76,19 +76,26 @@ GitHub Pages rebuilds automatically in under a minute. Check progress with:
 gh api repos/mjunaid106/ejaad/pages/builds/latest --jq '.status'
 ```
 
-### Custom domain (optional)
+### Custom domain
 
-1. Add a `CNAME` file at the repo root containing your domain, e.g. `ejaad.com`.
-2. Point a `CNAME` DNS record at `mjunaid106.github.io`.
-3. In **Settings → Pages → Custom domain**, enter the domain and enable HTTPS.
+The site is published at **https://ejaad.co.uk/**. Right now the domain redirects to the GitHub
+Pages URL, which works but shows `mjunaid106.github.io` in the address bar. To serve it directly
+from the domain:
 
-Then update the absolute URLs (`canonical`, `og:url`, `og:image`, `twitter:image`,
-`robots.txt`, `sitemap.xml`) to the new domain.
+1. At your DNS provider, remove the existing redirect for `ejaad.co.uk`.
+2. Add these `A` records for the apex domain:
+   `185.199.108.153`, `185.199.109.153`, `185.199.110.153`, `185.199.111.153`
+3. Add a `CNAME` record for `www` pointing to `mjunaid106.github.io`.
+4. Add a `CNAME` file at the repo root containing `ejaad.co.uk` (or set it in
+   **Settings → Pages → Custom domain**), then enable HTTPS.
+
+Do it in that order — committing the `CNAME` file before the DNS change causes a redirect loop
+between the old redirect and GitHub Pages.
 
 ## Contact form
 
 The form has no backend: on submit, JavaScript validates the fields and opens the visitor's
-email client with a pre-filled message to `hello@ejaad.com`. No data is stored.
+email client with a pre-filled message to `hello@ejaad.co.uk`. No data is stored.
 
 To collect submissions server-side instead, create a form endpoint (Formspree, Basin, Getform,
 Cloudflare Worker, etc.) and set the form's `action` and `method="post"`, then remove the

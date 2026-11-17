@@ -114,7 +114,7 @@
       ].join("\n");
 
       window.location.href =
-        "mailto:hello@ejaad.com?subject=" + encodeURIComponent(subject) +
+        "mailto:hello@ejaad.co.uk?subject=" + encodeURIComponent(subject) +
         "&body=" + encodeURIComponent(body);
     });
   }
