@@ -20,7 +20,7 @@
   --radius: 8px;
   --max: 1200px;
   --header-h: 72px;
-  --font-display: "Inter Tight", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  --font-display: "Archivo", "Helvetica Neue", Helvetica, Arial, sans-serif;
   --font-body: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
   --ease: cubic-bezier(0.22, 1, 0.36, 1);
 }
@@ -53,11 +53,11 @@ h1, h2, h3 {
   font-family: var(--font-display);
   font-weight: 600;
   line-height: 0.98;
-  letter-spacing: -0.045em;
+  letter-spacing: -0.03em;
 }
 h1 { font-size: clamp(2.9rem, 7.4vw, 6.2rem); }
-h2 { font-size: clamp(2.15rem, 4.7vw, 3.55rem); line-height: 1.02; letter-spacing: -0.04em; }
-h3 { font-size: clamp(1.35rem, 2.2vw, 1.75rem); line-height: 1.12; letter-spacing: -0.03em; }
+h2 { font-size: clamp(2.15rem, 4.7vw, 3.55rem); line-height: 1.02; letter-spacing: -0.03em; }
+h3 { font-size: clamp(1.35rem, 2.2vw, 1.75rem); line-height: 1.12; letter-spacing: -0.02em; }
 
 .accent { color: var(--accent); }
 
@@ -263,7 +263,84 @@ strong { font-weight: 600; }
     radial-gradient(40% 40% at 0% 20%, rgba(43, 71, 240, 0.045), transparent 70%);
 }
 
-.hero h1 { max-width: 16ch; }
+.hero-copy h1 { font-size: clamp(2.5rem, 4.8vw, 4.2rem); max-width: none; }
+.hero-grid {
+  position: relative;
+  display: grid;
+  grid-template-columns: minmax(0, 1.1fr) minmax(0, 0.8fr);
+  gap: clamp(2rem, 4vw, 4rem);
+  align-items: center;
+}
+
+.hero-poster {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  aspect-ratio: 4 / 5;
+  padding: clamp(1.5rem, 3vw, 2.2rem);
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  overflow: hidden;
+  background:
+    radial-gradient(95% 80% at 85% 5%, #dbe4ff 0%, transparent 60%),
+    radial-gradient(90% 80% at 5% 100%, #d6f8ec 0%, transparent 65%),
+    #f7f8fc;
+}
+.hero-poster::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image:
+    linear-gradient(rgba(11, 11, 12, 0.05) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(11, 11, 12, 0.05) 1px, transparent 1px);
+  background-size: 48px 48px;
+  mask-image: radial-gradient(70% 70% at 50% 45%, #000, transparent 85%);
+  -webkit-mask-image: radial-gradient(70% 70% at 50% 45%, #000, transparent 85%);
+}
+.poster-badge {
+  position: absolute;
+  top: 1.15rem;
+  left: 1.15rem;
+  z-index: 1;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  padding: 0.32rem 0.62rem;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.78);
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+  font-size: 0.63rem;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+.poster-mark {
+  position: relative;
+  width: 44%;
+  max-width: 190px;
+  aspect-ratio: 1;
+  filter: drop-shadow(0 26px 44px rgba(11, 11, 12, 0.22));
+}
+.poster-mark svg { width: 100%; height: 100%; }
+.poster-foot {
+  position: absolute;
+  left: 1.15rem;
+  right: 1.15rem;
+  bottom: 1.15rem;
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  font-size: 0.6rem;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+
 .hero h1 + .hero-row { margin-top: clamp(1.8rem, 3.5vw, 2.6rem); }
 
 .hero-row {
@@ -332,11 +409,10 @@ strong { font-weight: 600; }
 }
 .cap-name {
   font-family: var(--font-display);
-  font-size: clamp(1.15rem, 1.7vw, 1.4rem);
+  font-size: clamp(1.05rem, 1.55vw, 1.3rem);
   font-weight: 600;
-  letter-spacing: -0.035em;
+  letter-spacing: -0.03em;
   line-height: 1.12;
-  max-width: 13ch;
 }
 .cap-arrow {
   position: absolute;
@@ -874,6 +950,8 @@ a.contact-line:hover .contact-value { color: var(--accent); }
    -------------------------------------------------------------------------- */
 
 @media (max-width: 1000px) {
+  .hero-grid { grid-template-columns: 1fr; gap: 2rem; }
+  .hero-poster { aspect-ratio: auto; height: 340px; }
   .hero-row { gap: 1.3rem; }
   .capability-band { grid-template-columns: repeat(2, minmax(0, 1fr)); }
   .cap:nth-child(2n) { border-right: 0; }
@@ -937,6 +1015,8 @@ a.contact-line:hover .contact-value { color: var(--accent); }
 
   .hero { padding-top: 2.2rem; padding-bottom: 1.6rem; }
   .hero h1 { font-size: clamp(2.45rem, 10.5vw, 3.6rem); }
+  .hero-poster { height: 280px; }
+  .poster-foot span:last-child { display: none; }
   .hero-actions { width: 100%; align-items: flex-start; flex-direction: column; }
   .hero-actions .btn { width: 100%; }
 
