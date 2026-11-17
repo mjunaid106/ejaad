@@ -78,19 +78,19 @@ gh api repos/mjunaid106/ejaad/pages/builds/latest --jq '.status'
 
 ### Custom domain
 
-The site is published at **https://ejaad.co.uk/**. Right now the domain redirects to the GitHub
-Pages URL, which works but shows `mjunaid106.github.io` in the address bar. To serve it directly
-from the domain:
+The site is served directly from **https://ejaad.co.uk/** — GitHub Pages custom domain, declared by
+the `CNAME` file in this repo.
 
-1. At your DNS provider, remove the existing redirect for `ejaad.co.uk`.
-2. Add these `A` records for the apex domain:
-   `185.199.108.153`, `185.199.109.153`, `185.199.110.153`, `185.199.111.153`
-3. Add a `CNAME` record for `www` pointing to `mjunaid106.github.io`.
-4. Add a `CNAME` file at the repo root containing `ejaad.co.uk` (or set it in
-   **Settings → Pages → Custom domain**), then enable HTTPS.
+DNS at IONOS:
 
-Do it in that order — committing the `CNAME` file before the DNS change causes a redirect loop
-between the old redirect and GitHub Pages.
+- four `A` records on `@`: `185.199.108.153`, `185.199.109.153`, `185.199.110.153`, `185.199.111.153`
+- `CNAME` on `www` → `mjunaid106.github.io`
+- no `AAAA` on the apex
+
+Email stays on IONOS: the `MX`, SPF/DKIM/DMARC and autodiscover records must not be touched.
+
+HTTPS is issued and renewed by GitHub Pages. Keep **Enforce HTTPS** enabled in
+**Settings → Pages**.
 
 ## Contact form
 
