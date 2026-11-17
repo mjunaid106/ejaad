@@ -41,6 +41,6 @@ GitHub Pages deploys `main` from the repository root; `https://ejaad.co.uk/adhan
 
 ## Subdomain
 
-`adhan.ejaad.co.uk` is configured at IONOS as a redirect to `https://ejaad.co.uk/adhan/`. GitHub
+`adhan.ejaad.co.uk` forwards to `https://ejaad.co.uk/adhan/` via IONOS subdomain forwarding. GitHub
 Pages binds one custom domain per repository and cannot alias a hostname to a subfolder, so the
 subdomain redirects rather than serving the folder directly.
