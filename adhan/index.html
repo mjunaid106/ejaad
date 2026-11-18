@@ -1,9 +1,9 @@
 <!doctype html>
-<html lang="en">
+<html lang="en-GB">
 <head>
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
-<meta http-equiv="Content-Security-Policy" content="default-src 'self'; base-uri 'none'; object-src 'none'; frame-src 'none'; img-src 'self' data:; font-src 'self'; style-src 'self'; script-src 'self'; connect-src 'none'; form-action 'self'" />
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; base-uri 'none'; object-src 'none'; frame-src 'none'; img-src 'self' data:; font-src 'self'; style-src 'self'; script-src 'self' 'sha256-mDRL8oIVgLPwOaaM8QO8Uq7H8HHfXc3AyPhVj7c+MnA='; connect-src 'none'; form-action 'self'" />
 <meta name="referrer" content="strict-origin-when-cross-origin" />
 <title>Adhan: Prayer Times</title>
 <meta name="description" content="An Android prayer-time app: the five daily times calculated on your phone, the adhan at prayer time, a fourteen-day outlook, the Qibla, and nearby mosques." />
@@ -11,6 +11,7 @@
 <link rel="canonical" href="https://ejaad.co.uk/adhan/" />
 
 <meta property="og:type" content="website" />
+<meta property="og:locale" content="en_GB" />
 <meta property="og:site_name" content="Adhan" />
 <meta property="og:title" content="Adhan: Prayer Times" />
 <meta property="og:description" content="Prayer times calculated on your phone, with the adhan at prayer time, a fourteen-day outlook, the Qibla and nearby mosques." />
@@ -24,6 +25,40 @@
 <link rel="icon" href="assets/img/brand-mark.svg" type="image/svg+xml" />
 <link rel="stylesheet" href="/assets/css/fonts.css" />
 <link rel="stylesheet" href="assets/css/styles.css" />
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "MobileApplication",
+      "name": "Adhan: Prayer Times",
+      "description": "Prayer times calculated on the phone, the adhan, the Qibla, and nearby mosques. Android.",
+      "url": "https://ejaad.co.uk/adhan/",
+      "image": "https://ejaad.co.uk/adhan/assets/img/og.png",
+      "operatingSystem": "Android",
+      "applicationCategory": "LifestyleApplication",
+      "inLanguage": "en-GB"
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "ejaad",
+          "item": "https://ejaad.co.uk/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Adhan: Prayer Times",
+          "item": "https://ejaad.co.uk/adhan/"
+        }
+      ]
+    }
+  ]
+}
+</script>
 </head>
 <body>
 <a class="skip-link" href="#main">Skip to content</a>
@@ -327,6 +362,7 @@
       <a href="#credits">Credits</a>
       <a href="https://ejaad.co.uk">ejaad.co.uk ↗</a>
       <a href="mailto:hello@ejaad.co.uk">hello@ejaad.co.uk</a>
+      <a href="/privacy/">Site privacy</a>
     </nav>
   </div>
   <div class="container footer-base">

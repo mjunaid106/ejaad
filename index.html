@@ -1,9 +1,9 @@
 <!doctype html>
-<html lang="en">
+<html lang="en-GB">
 <head>
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
-<meta http-equiv="Content-Security-Policy" content="default-src 'self'; base-uri 'none'; object-src 'none'; frame-src 'none'; img-src 'self' data:; font-src 'self'; style-src 'self'; script-src 'self' 'sha256-PqJXHqGoyDkj+98vfopTNuLfZ9YoTJpAY30mZIMS+S0='; connect-src 'none'; form-action 'self'" />
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; base-uri 'none'; object-src 'none'; frame-src https://*.clarity.ms; img-src 'self' data: https://*.clarity.ms; font-src 'self'; style-src 'self'; script-src 'self' 'sha256-v5AYnjcveCHpoaONhDVcqFGQlXmLRyLNaUcVxt/93JY=' https://*.clarity.ms; connect-src https://*.clarity.ms; form-action 'self'" />
 <meta name="referrer" content="strict-origin-when-cross-origin" />
 <title>ejaad — Software Consulting for AI, Mobile, Web &amp; Enterprise</title>
 <meta name="description" content="ejaad is a software consultancy that designs and ships AI systems, mobile apps and games, production websites, and corporate platforms built to last." />
@@ -11,6 +11,7 @@
 <link rel="canonical" href="https://ejaad.co.uk/" />
 
 <meta property="og:type" content="website" />
+<meta property="og:locale" content="en_GB" />
 <meta property="og:site_name" content="ejaad" />
 <meta property="og:title" content="ejaad — Software Consulting" />
 <meta property="og:description" content="We build AI systems, mobile apps and games, websites, and corporate platforms that earn their keep." />
@@ -37,6 +38,9 @@
   "url": "https://ejaad.co.uk/",
   "email": "hello@ejaad.co.uk",
   "areaServed": "Worldwide",
+  "logo": "https://ejaad.co.uk/assets/img/brand-mark-180.png",
+  "image": "https://ejaad.co.uk/assets/img/og.png",
+  "inLanguage": "en-GB",
   "knowsAbout": ["Artificial Intelligence", "Android Development", "Mobile App Development", "Game Development", "Web Development", "Enterprise Software"]
 }
 </script>
@@ -508,7 +512,7 @@
         </div>
       </div>
 
-      <form class="contact-form reveal" id="contactForm" novalidate>
+      <form class="contact-form reveal" id="contactForm" novalidate data-clarity-mask="true">
         <div class="field">
           <label for="name">Name</label>
           <input id="name" name="name" type="text" autocomplete="name" required placeholder="Your name" />
@@ -591,6 +595,8 @@
       <a href="/adhan/">Adhan <span aria-hidden="true">↗</span></a>
       <a href="/cat-island/">Cat Island <span aria-hidden="true">↗</span></a>
       <a href="/treat-trail/">Treat Trail <span aria-hidden="true">↗</span></a>
+      <a href="/privacy/">Privacy</a>
+      <a href="#" id="manageConsent">Manage analytics</a>
     </nav>
   </div>
   <div class="container footer-base">
@@ -599,6 +605,18 @@
   </div>
 </footer>
 
+<div class="consent" id="consentBanner" role="region" aria-label="Analytics consent" hidden>
+  <p>
+    This site uses Microsoft Clarity to understand how pages are used. It loads only if you
+    accept, and form fields are masked. <a href="/privacy/">Privacy</a>.
+  </p>
+  <div class="consent-actions">
+    <button type="button" class="btn btn-solid" id="consentAccept">Accept</button>
+    <button type="button" class="btn btn-quiet" id="consentDecline">Decline</button>
+  </div>
+</div>
+
 <script src="assets/js/main.js" defer></script>
+<script src="assets/js/consent.js" defer></script>
 </body>
 </html>

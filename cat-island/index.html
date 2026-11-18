@@ -1,9 +1,9 @@
 <!doctype html>
-<html lang="en">
+<html lang="en-GB">
 <head>
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
-<meta http-equiv="Content-Security-Policy" content="default-src 'self'; base-uri 'none'; object-src 'none'; frame-src 'none'; img-src 'self' data:; font-src 'self'; style-src 'self'; script-src 'self'; connect-src 'none'; form-action 'self'" />
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; base-uri 'none'; object-src 'none'; frame-src 'none'; img-src 'self' data:; font-src 'self'; style-src 'self'; script-src 'self' 'sha256-ISvrS3m0WLZVZURBetHmRl1NqMM6Kok5ehkQAaMi+qU='; connect-src 'none'; form-action 'self'" />
 <meta name="referrer" content="strict-origin-when-cross-origin" />
 <title>Cat Island</title>
 <meta name="description" content="Cat Island is a tropical side-scrolling cat obstacle course for Android: two courses, five cats, fish coins and shop boosts." />
@@ -11,6 +11,7 @@
 <link rel="canonical" href="https://ejaad.co.uk/cat-island/" />
 
 <meta property="og:type" content="website" />
+<meta property="og:locale" content="en_GB" />
 <meta property="og:site_name" content="Cat Island" />
 <meta property="og:title" content="Cat Island" />
 <meta property="og:description" content="A tropical side-scrolling cat obstacle course for Android: two courses, five cats, fish coins and shop boosts." />
@@ -25,6 +26,40 @@
 <link rel="apple-touch-icon" href="assets/img/icon.png" />
 <link rel="stylesheet" href="/assets/css/fonts.css" />
 <link rel="stylesheet" href="assets/css/styles.css" />
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "MobileApplication",
+      "name": "Cat Island",
+      "description": "A tropical side-scrolling cat obstacle course for Android, with two courses, five cats and shop boosts.",
+      "url": "https://ejaad.co.uk/cat-island/",
+      "image": "https://ejaad.co.uk/cat-island/assets/img/og.png",
+      "operatingSystem": "Android",
+      "applicationCategory": "GameApplication",
+      "inLanguage": "en-GB"
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "ejaad",
+          "item": "https://ejaad.co.uk/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Cat Island",
+          "item": "https://ejaad.co.uk/cat-island/"
+        }
+      ]
+    }
+  ]
+}
+</script>
 </head>
 <body>
 <a class="skip-link" href="#main">Skip to content</a>
@@ -374,6 +409,7 @@
       <a href="#build">Build</a>
       <a href="https://ejaad.co.uk">ejaad.co.uk ↗</a>
       <a href="mailto:hello@ejaad.co.uk">hello@ejaad.co.uk</a>
+      <a href="/privacy/">Privacy</a>
     </nav>
   </div>
   <div class="container footer-base">

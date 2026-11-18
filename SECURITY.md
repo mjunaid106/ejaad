@@ -9,16 +9,26 @@ machine-readable contact.
 ## What this site is
 
 A static marketing site hosted on **GitHub Pages**. There is no server-side code, no database, no
-login, no cookies, no analytics and no form endpoint. The only interactive element is the contact
-form, which composes a `mailto:` message in the visitor's mail client.
+login, no form endpoint and no cookies by default. The contact form composes a `mailto:` message in
+the visitor's mail client.
+
+## Analytics and consent
+
+The homepage can load **Microsoft Clarity** to understand how the site is used. It is loaded only
+after the visitor chooses **Accept** in the consent banner; declining sets no Clarity script or
+cookie. The choice is stored in `localStorage` and can be reset with **Manage analytics** in the
+homepage footer. The contact form is marked with `data-clarity-mask="true"`, so names, emails and
+messages are not captured in recordings. The product pages and this privacy page do not load
+Clarity.
 
 ## Hardening in place
 
 - HTTPS enforced on `ejaad.co.uk`; the `adhan` subdomain redirects to HTTPS.
 - All fonts are **self-hosted** under `assets/fonts/`; no third-party font or script requests.
-- A meta Content Security Policy on every page restricts resources to the site origin, blocks
-  framing and objects, and disallows outbound connections.
-- Inline scripts were removed; the JSON-LD block is allowed by a SHA-256 hash in the homepage CSP.
+- A meta Content Security Policy on every page restricts resources to the site origin. The homepage
+  additionally allows Microsoft Clarity only for consented analytics; no other third-party scripts
+  are permitted.
+- Inline scripts were removed; JSON-LD blocks are allowed by per-page SHA-256 hashes.
 - External links open with `rel="noopener noreferrer"`.
 - No secrets or credentials are stored in the repository.
 - Image screenshots carry no GPS or device EXIF metadata.
@@ -33,11 +43,11 @@ in front and add them there.
 
 ## Maintaining the CSP
 
-The homepage CSP allows its JSON-LD block by hash. If that JSON-LD changes, recompute the hash and
-update the `script-src` value in `index.html`:
+The homepage and the three product pages allow their JSON-LD blocks by hash. If a JSON-LD block
+changes, recompute the hash for that page and update its `script-src` value. For example:
 
 ```bash
-node -e "const c=require('crypto'),f=require('fs');const s=f.readFileSync('index.html','utf8');const m=s.match(/<script type=\"application\/ld\+json\">([\s\S]*?)<\/script>/);console.log('sha256-'+c.createHash('sha256').update(m[1]).digest('base64'))"
+node -e "const c=require('crypto'),f=require('fs');const s=f.readFileSync('adhan/index.html','utf8');const m=s.match(/<script type=\"application\/ld\+json\">([\s\S]*?)<\/script>/);console.log('sha256-'+c.createHash('sha256').update(m[1]).digest('base64'))"
 ```
 
 If a browser blocks a needed resource, check the developer console for a `Content Security Policy`
