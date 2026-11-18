@@ -3,6 +3,8 @@
 <head>
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; base-uri 'none'; object-src 'none'; frame-src 'none'; img-src 'self' data:; font-src 'self'; style-src 'self'; script-src 'self'; connect-src 'none'; form-action 'self'" />
+<meta name="referrer" content="strict-origin-when-cross-origin" />
 <title>Adhan: Prayer Times</title>
 <meta name="description" content="An Android prayer-time app: the five daily times calculated on your phone, the adhan at prayer time, a fourteen-day outlook, the Qibla, and nearby mosques." />
 <meta name="theme-color" content="#ffffff" />
@@ -20,9 +22,7 @@
 <meta name="twitter:image" content="https://ejaad.co.uk/adhan/assets/img/og.png" />
 
 <link rel="icon" href="assets/img/brand-mark.svg" type="image/svg+xml" />
-<link rel="preconnect" href="https://fonts.googleapis.com" />
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="/assets/css/fonts.css" />
 <link rel="stylesheet" href="assets/css/styles.css" />
 </head>
 <body>
@@ -232,9 +232,9 @@
       <div class="osm">
         <h3>Mosque data</h3>
         <p>
-          © <a href="https://www.openstreetmap.org/copyright" target="_blank" rel="noopener">OpenStreetMap contributors</a>,
+          © <a href="https://www.openstreetmap.org/copyright" target="_blank" rel="noopener noreferrer">OpenStreetMap contributors</a>,
           licensed under the
-          <a href="https://opendatacommons.org/licenses/odbl/1-0/" target="_blank" rel="noopener">Open Database License (ODbL) 1.0</a>.
+          <a href="https://opendatacommons.org/licenses/odbl/1-0/" target="_blank" rel="noopener noreferrer">Open Database License (ODbL) 1.0</a>.
           The bundled dataset is as of November 2026 and covers Great Britain and Pakistan.
         </p>
       </div>
@@ -245,15 +245,15 @@
           <p class="credit-name">Adhan — Great Mosque of Mecca <span class="credit-id">default</span></p>
           <p class="credit-meta">
             Seyfula Islam, via Wikimedia Commons. Licensed under
-            <a href="https://creativecommons.org/licenses/by/3.0/" target="_blank" rel="noopener">CC BY 3.0</a>.
-            <a href="https://commons.wikimedia.org/wiki/File:Adhan,_Great_Mosque_of_Mecca_-_Jan_21,_2013.webm" target="_blank" rel="noopener">Source</a>.
+            <a href="https://creativecommons.org/licenses/by/3.0/" target="_blank" rel="noopener noreferrer">CC BY 3.0</a>.
+            <a href="https://commons.wikimedia.org/wiki/File:Adhan,_Great_Mosque_of_Mecca_-_Jan_21,_2013.webm" target="_blank" rel="noopener noreferrer">Source</a>.
           </p>
         </li>
         <li>
           <p class="credit-name">Jemaa El-Fna field recording <span class="credit-id">marrakech-jemaa</span></p>
           <p class="credit-meta">
             Redalemage, via Freesound. Licensed under
-            <a href="https://creativecommons.org/publicdomain/zero/1.0/" target="_blank" rel="noopener">CC0 1.0</a>.
+            <a href="https://creativecommons.org/publicdomain/zero/1.0/" target="_blank" rel="noopener noreferrer">CC0 1.0</a>.
             Credited voluntarily.
           </p>
         </li>
@@ -261,7 +261,7 @@
           <p class="credit-name">Yet Another Adhan <span class="credit-id">alafasy-yet-another</span></p>
           <p class="credit-meta">
             Mishary Rashid Alafasy, via
-            <a href="https://aladhan.com" target="_blank" rel="noopener">Islamic Network / AlAdhan.com</a>.
+            <a href="https://aladhan.com" target="_blank" rel="noopener noreferrer">Islamic Network / AlAdhan.com</a>.
             Public domain, per Islamic Network. Credited voluntarily.
           </p>
         </li>
@@ -270,7 +270,7 @@
           <p class="credit-meta">
             Reciter credit unresolved: the source catalogue labels this file differently from its
             filename. Via
-            <a href="https://aladhan.com" target="_blank" rel="noopener">Islamic Network / AlAdhan.com</a>.
+            <a href="https://aladhan.com" target="_blank" rel="noopener noreferrer">Islamic Network / AlAdhan.com</a>.
             Public domain, per Islamic Network.
           </p>
         </li>
@@ -278,7 +278,7 @@
           <p class="credit-name">aladhan-a9 <span class="credit-id">aladhan-a9</span></p>
           <p class="credit-meta">
             Reciter unknown, via
-            <a href="https://aladhan.com" target="_blank" rel="noopener">Islamic Network / AlAdhan.com</a>.
+            <a href="https://aladhan.com" target="_blank" rel="noopener noreferrer">Islamic Network / AlAdhan.com</a>.
             Public domain, per Islamic Network.
           </p>
         </li>
@@ -286,9 +286,9 @@
           <p class="credit-name">Dua after the adhan <span class="credit-id">dua</span></p>
           <p class="credit-meta">
             Synthetic speech generated with
-            <a href="https://github.com/rhasspy/piper" target="_blank" rel="noopener">Piper</a> (MIT) using the
+            <a href="https://github.com/rhasspy/piper" target="_blank" rel="noopener noreferrer">Piper</a> (MIT) using the
             <code>ar_JO-kareem-medium</code> voice from
-            <a href="https://github.com/rhasspy/piper-voices" target="_blank" rel="noopener">rhasspy/piper-voices</a>
+            <a href="https://github.com/rhasspy/piper-voices" target="_blank" rel="noopener noreferrer">rhasspy/piper-voices</a>
             (MIT); generated locally on 16 November 2026. Licensed under MIT.
           </p>
           <p class="credit-note">
@@ -334,9 +334,6 @@
     <p>Adhan: Prayer Times · Android</p>
   </div>
 </footer>
-
-<script>
-  document.getElementById("year").textContent = new Date().getFullYear();
-</script>
+<script src="/assets/js/year.js" defer></script>
 </body>
 </html>

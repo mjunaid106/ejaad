@@ -3,25 +3,16 @@
 <head>
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; base-uri 'none'; object-src 'none'; frame-src 'none'; img-src 'self' data:; font-src 'self'; style-src 'self'; script-src 'self'; connect-src 'none'; form-action 'self'" />
+<meta name="referrer" content="strict-origin-when-cross-origin" />
 <title>Page not found — ejaad</title>
 <meta name="robots" content="noindex" />
 <meta name="theme-color" content="#ffffff" />
-<link rel="icon" href="assets/img/brand-mark.svg" type="image/svg+xml" />
-<link rel="apple-touch-icon" href="assets/img/brand-mark-180.png" />
-<link rel="preconnect" href="https://fonts.googleapis.com" />
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
-<link rel="stylesheet" href="assets/css/styles.css" />
-<style>
-  .notfound {
-    min-height: 100svh;
-    display: grid;
-    align-content: center;
-    padding-block: 4rem;
-  }
-  .notfound h1 { max-width: 15ch; margin-bottom: 1.4rem; }
-  .notfound .notfound-copy { max-width: 46ch; color: var(--muted); margin-bottom: 2rem; }
-</style>
+<link rel="icon" href="/assets/img/brand-mark.svg" type="image/svg+xml" />
+<link rel="apple-touch-icon" href="/assets/img/brand-mark-180.png" />
+<link rel="stylesheet" href="/assets/css/fonts.css" />
+<link rel="stylesheet" href="/assets/css/styles.css" />
+<link rel="stylesheet" href="/assets/css/404.css" />
 </head>
 <body>
 <main class="notfound">
@@ -30,7 +21,7 @@
     <h1>This page went <span class="accent">missing.</span></h1>
     <p class="notfound-copy">The link is broken or the page moved. Head back to the homepage, or send us a note and we'll point you in the right direction.</p>
     <div class="hero-actions">
-      <a class="btn btn-solid" href="index.html">Back to ejaad <span aria-hidden="true">→</span></a>
+      <a class="btn btn-solid" href="/">Back to ejaad <span aria-hidden="true">→</span></a>
       <a class="link-arrow" href="mailto:hello@ejaad.co.uk">hello@ejaad.co.uk</a>
     </div>
   </div>

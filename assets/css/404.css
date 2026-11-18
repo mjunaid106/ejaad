@@ -1,0 +1,8 @@
+.notfound {
+  min-height: 100svh;
+  display: grid;
+  align-content: center;
+  padding-block: 4rem;
+}
+.notfound h1 { max-width: 15ch; margin-bottom: 1.4rem; }
+.notfound .notfound-copy { max-width: 46ch; color: var(--muted); margin-bottom: 2rem; }
