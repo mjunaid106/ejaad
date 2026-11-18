@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
-<meta http-equiv="Content-Security-Policy" content="default-src 'self'; base-uri 'none'; object-src 'none'; frame-src 'none'; img-src 'self' data:; font-src 'self'; style-src 'self'; script-src 'self' 'sha256-ISvrS3m0WLZVZURBetHmRl1NqMM6Kok5ehkQAaMi+qU='; connect-src 'none'; form-action 'self'" />
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; base-uri 'none'; object-src 'none'; frame-src https://*.clarity.ms; img-src 'self' data: https://*.clarity.ms; font-src 'self'; style-src 'self'; script-src 'self' 'sha256-ISvrS3m0WLZVZURBetHmRl1NqMM6Kok5ehkQAaMi+qU=' https://*.clarity.ms; connect-src https://*.clarity.ms; form-action 'self'" />
 <meta name="referrer" content="strict-origin-when-cross-origin" />
 <title>Cat Island</title>
 <meta name="description" content="Cat Island is a tropical side-scrolling cat obstacle course for Android: two courses, five cats, fish coins and shop boosts." />
@@ -26,6 +26,7 @@
 <link rel="apple-touch-icon" href="assets/img/icon.png" />
 <link rel="stylesheet" href="/assets/css/fonts.css" />
 <link rel="stylesheet" href="assets/css/styles.css" />
+<link rel="stylesheet" href="/assets/css/consent.css" />
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -410,6 +411,7 @@
       <a href="https://ejaad.co.uk">ejaad.co.uk ↗</a>
       <a href="mailto:hello@ejaad.co.uk">hello@ejaad.co.uk</a>
       <a href="/privacy/">Privacy</a>
+      <a href="#" id="manageConsent">Manage analytics</a>
     </nav>
   </div>
   <div class="container footer-base">
@@ -417,6 +419,18 @@
     <p>Cat Island · Android · v1.0.11</p>
   </div>
 </footer>
+<div class="consent" id="consentBanner" role="region" aria-label="Analytics consent" hidden>
+  <p>
+    This site uses Microsoft Clarity to understand how pages are used. It loads only if you
+    accept. <a href="/privacy/">Privacy</a>.
+  </p>
+  <div class="consent-actions">
+    <button type="button" class="btn btn-solid" id="consentAccept">Accept</button>
+    <button type="button" class="btn btn-quiet" id="consentDecline">Decline</button>
+  </div>
+</div>
+
+<script src="/assets/js/consent.js" defer></script>
 <script src="/assets/js/year.js" defer></script>
 </body>
 </html>

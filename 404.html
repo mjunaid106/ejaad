@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
-<meta http-equiv="Content-Security-Policy" content="default-src 'self'; base-uri 'none'; object-src 'none'; frame-src 'none'; img-src 'self' data:; font-src 'self'; style-src 'self'; script-src 'self'; connect-src 'none'; form-action 'self'" />
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; base-uri 'none'; object-src 'none'; frame-src https://*.clarity.ms; img-src 'self' data: https://*.clarity.ms; font-src 'self'; style-src 'self'; script-src 'self' https://*.clarity.ms; connect-src https://*.clarity.ms; form-action 'self'" />
 <meta name="referrer" content="strict-origin-when-cross-origin" />
 <title>Page not found — ejaad</title>
 <meta name="robots" content="noindex" />
@@ -13,6 +13,7 @@
 <link rel="stylesheet" href="/assets/css/fonts.css" />
 <link rel="stylesheet" href="/assets/css/styles.css" />
 <link rel="stylesheet" href="/assets/css/404.css" />
+<link rel="stylesheet" href="/assets/css/consent.css" />
 </head>
 <body>
 <main class="notfound">
@@ -26,5 +27,17 @@
     </div>
   </div>
 </main>
+<div class="consent" id="consentBanner" role="region" aria-label="Analytics consent" hidden>
+  <p>
+    This site uses Microsoft Clarity to understand how pages are used. It loads only if you
+    accept. <a href="/privacy/">Privacy</a>.
+  </p>
+  <div class="consent-actions">
+    <button type="button" class="btn btn-solid" id="consentAccept">Accept</button>
+    <button type="button" class="btn btn-quiet" id="consentDecline">Decline</button>
+  </div>
+</div>
+
+<script src="/assets/js/consent.js" defer></script>
 </body>
 </html>

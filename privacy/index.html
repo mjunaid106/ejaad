@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
-<meta http-equiv="Content-Security-Policy" content="default-src 'self'; base-uri 'none'; object-src 'none'; frame-src 'none'; img-src 'self' data:; font-src 'self'; style-src 'self'; script-src 'self'; connect-src 'none'; form-action 'self'" />
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; base-uri 'none'; object-src 'none'; frame-src https://*.clarity.ms; img-src 'self' data: https://*.clarity.ms; font-src 'self'; style-src 'self'; script-src 'self' https://*.clarity.ms; connect-src https://*.clarity.ms; form-action 'self'" />
 <meta name="referrer" content="strict-origin-when-cross-origin" />
 <title>Privacy — ejaad</title>
 <meta name="description" content="How the ejaad website handles analytics and data, including Microsoft Clarity consent and the privacy of the Adhan, Cat Island and Treat Trail apps." />
@@ -15,6 +15,7 @@
 <link rel="stylesheet" href="/assets/css/fonts.css" />
 <link rel="stylesheet" href="/assets/css/styles.css" />
 <link rel="stylesheet" href="/assets/css/legal.css" />
+<link rel="stylesheet" href="/assets/css/consent.css" />
 </head>
 <body>
 <a class="skip-link" href="#main">Skip to content</a>
@@ -59,7 +60,7 @@
 
     <h2>Analytics on this website</h2>
     <p>
-      The ejaad homepage uses <a href="https://clarity.microsoft.com/" target="_blank" rel="noopener noreferrer">Microsoft Clarity</a>
+      This website uses <a href="https://clarity.microsoft.com/" target="_blank" rel="noopener noreferrer">Microsoft Clarity</a>
       to understand how the site is used: pages visited, clicks, scrolling, device and browser
       information, an approximate region derived from the connection, and session recordings.
     </p>
@@ -81,14 +82,13 @@
       <li>No accounts or sign-in on this website.</li>
       <li>No advertising, no selling of personal data.</li>
       <li>The contact form does not submit to a server. It composes a message in your email client.</li>
-      <li>The product pages for Adhan, Cat Island and Treat Trail do not load Clarity.</li>
     </ul>
 
     <h2>The apps</h2>
     <p>
       Adhan: Prayer Times, Cat Island and Treat Trail Learning are separate Android apps. Their
       product pages describe their own data practices. Their progress and settings stay on the
-      device, and the website analytics above do not apply to app usage.
+      device, and the website analytics above do not apply to app usage. The “no analytics” statements on the app pages describe the apps themselves, not this marketing site.
     </p>
 
     <h2>Contact</h2>
@@ -126,6 +126,7 @@
       <a href="/cat-island/">Cat Island</a>
       <a href="/treat-trail/">Treat Trail</a>
       <a href="mailto:hello@ejaad.co.uk">hello@ejaad.co.uk</a>
+      <a href="#" id="manageConsent">Manage analytics</a>
     </nav>
   </div>
   <div class="container footer-base">
@@ -133,5 +134,17 @@
     <p>Privacy</p>
   </div>
 </footer>
+<div class="consent" id="consentBanner" role="region" aria-label="Analytics consent" hidden>
+  <p>
+    This site uses Microsoft Clarity to understand how pages are used. It loads only if you
+    accept. <a href="/privacy/">Privacy</a>.
+  </p>
+  <div class="consent-actions">
+    <button type="button" class="btn btn-solid" id="consentAccept">Accept</button>
+    <button type="button" class="btn btn-quiet" id="consentDecline">Decline</button>
+  </div>
+</div>
+
+<script src="/assets/js/consent.js" defer></script>
 </body>
 </html>

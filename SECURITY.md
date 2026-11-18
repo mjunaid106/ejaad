@@ -14,12 +14,12 @@ the visitor's mail client.
 
 ## Analytics and consent
 
-The homepage can load **Microsoft Clarity** to understand how the site is used. It is loaded only
+The site can load **Microsoft Clarity** to understand how the site is used. It is loaded only
 after the visitor chooses **Accept** in the consent banner; declining sets no Clarity script or
 cookie. The choice is stored in `localStorage` and can be reset with **Manage analytics** in the
-homepage footer. The contact form is marked with `data-clarity-mask="true"`, so names, emails and
-messages are not captured in recordings. The product pages and this privacy page do not load
-Clarity.
+footer. The contact form is marked with `data-clarity-mask="true"`, so names, emails and
+messages are not captured in recordings. Clarity is used on the marketing pages, and only after
+consent.
 
 ## Hardening in place
 
