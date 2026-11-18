@@ -720,6 +720,60 @@ strong { font-weight: 600; }
 .stack-list li:hover { border-color: var(--accent); color: var(--accent); }
 
 /* --------------------------------------------------------------------------
+   Apps
+   -------------------------------------------------------------------------- */
+
+.app-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1rem;
+}
+.app-card {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 1.1rem 1.2rem;
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  background: #fff;
+  transition: transform 0.22s var(--ease), border-color 0.22s ease, box-shadow 0.22s ease;
+}
+.app-card:hover {
+  transform: translateY(-2px);
+  border-color: var(--line-strong);
+  box-shadow: 0 24px 45px -38px rgba(11, 11, 12, 0.5);
+}
+.app-icon {
+  width: 64px;
+  height: 64px;
+  flex: none;
+  border: 1px solid var(--line);
+  border-radius: 16px;
+  overflow: hidden;
+  background: var(--soft);
+}
+.app-icon img { width: 100%; height: 100%; object-fit: cover; object-position: top; }
+.app-body { display: flex; flex-direction: column; gap: 0.2rem; min-width: 0; }
+.app-body strong {
+  font-family: var(--font-display);
+  font-size: 0.95rem;
+  font-weight: 600;
+  letter-spacing: -0.02em;
+}
+.app-body span { font-size: 0.8rem; line-height: 1.45; color: var(--muted); }
+.app-arrow {
+  margin-left: auto;
+  font-size: 1.05rem;
+  color: var(--faint);
+  transition: transform 0.22s var(--ease), color 0.18s ease;
+}
+.app-card:hover .app-arrow { color: var(--accent); transform: translate(2px, -2px); }
+
+@media (max-width: 900px) {
+  .app-grid { grid-template-columns: 1fr; }
+}
+
+/* --------------------------------------------------------------------------
    About
    -------------------------------------------------------------------------- */
 
