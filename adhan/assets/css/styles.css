@@ -471,3 +471,10 @@ code { font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; fo
   html { scroll-behavior: auto; }
   *, *::before, *::after { transition-duration: 0.001ms !important; animation: none !important; }
 }
+
+/* Closing wash above the footer */
+#credits {
+  background:
+    radial-gradient(60% 50% at 85% 100%, rgba(46, 230, 168, 0.1), transparent 65%),
+    linear-gradient(180deg, #ffffff 0%, #f4fbf7 100%);
+}
