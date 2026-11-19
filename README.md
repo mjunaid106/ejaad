@@ -60,6 +60,27 @@ hero → services → approach → work → about → contact.
 **Social preview image** — `assets/img/og.png` is 1200×630. Replace it with your own and keep
 the same filename.
 
+## Cache busting
+
+GitHub Pages serves every file with `Cache-Control: max-age=600`, so browsers can keep old CSS
+and JS for up to ten minutes after a deploy. Stylesheet and script links therefore carry a
+version query (`?v=20261119`).
+
+After editing anything in `assets/css/`, `assets/js/`, or a product page's own `styles.css`, bump
+the token in every page so browsers fetch the new files immediately:
+
+```powershell
+$old = '20261119'; $new = '20261120'
+Get-ChildItem -Recurse -Filter *.html | ForEach-Object {
+  (Get-Content $_.FullName -Raw).Replace("?v=$old", "?v=$new") |
+    Set-Content $_.FullName -NoNewline -Encoding UTF8
+}
+```
+
+Use today's date as the token so it is obvious when it was last bumped. HTML itself is still
+cached for up to ten minutes; the query string only guarantees fresh CSS and JS once the new HTML
+arrives.
+
 ## Deploying to GitHub Pages
 
 This repo deploys from the `main` branch, repository root. To publish changes:
